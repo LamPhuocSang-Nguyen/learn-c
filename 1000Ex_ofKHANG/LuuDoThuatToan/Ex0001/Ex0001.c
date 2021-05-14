@@ -1,21 +1,21 @@
+//$$49
+
 #include <stdio.h>
 
 int main()
 {
-    float s = 0;
     int n;
-    int i = 2;
+    int i = 1;
 
-    printf("n = ");
-    scanf("%3d",&n);
+    printf("Nhap n = ");
+    scanf("%d", &n);
 
-    while(i <= n * 2)
+    while(i <= n)
     {
-        s = s + 1.0 / i;
-        i = i + 2;
+        if(n % i == 0)
+            printf("%d \t", i);
+
+        i = i + 1;
     }
-
-    printf("s = %3.3f", s);
-
-    return 1;
+    return 0;
 }
