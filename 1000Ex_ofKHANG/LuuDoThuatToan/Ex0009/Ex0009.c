@@ -6,13 +6,19 @@ int n = 0;
 
 void Nhap();
 int KtHoanThien();
+void XuLy();
 
 int main()
 {
-    int kq;
-
     Nhap();
-    kq = KtHoanThien();
+    XuLy();
+
+    return 0;
+}
+
+void XuLy()
+{
+    int kq = KtHoanThien();
 
     if(kq)
     {
@@ -22,8 +28,6 @@ int main()
     {
         printf("\nKhong phai so hoan thien");
     }
-
-    return 0;
 }
 
 void Nhap()
