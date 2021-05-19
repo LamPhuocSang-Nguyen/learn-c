@@ -1,3 +1,5 @@
+//$$0002
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -13,7 +15,7 @@ int main()
     InputElement(&n,a);
     OutputElement(n,a);
 
-    exit(EXIT_SUCCESS);
+    return 0;
 }
 
 void InputElement(int *n, float a[*n])
