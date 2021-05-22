@@ -5,9 +5,9 @@
 void InputElement(void);
 void OutputElement(void);
 int isPrime(int a);
-int CountPrime();
-int SumOfPrime();
-void AveragePrime();
+int CountPrime(void);
+int SumOfPrime(void);
+void AveragePrime(void);
 
 int arr[100];
 int n;
