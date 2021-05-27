@@ -85,6 +85,7 @@ void Enumerate(void)
     if(lc == 0)
     {
         printf("Array has not prime number");
+        return;
     }
 
     for(int i = 0; i < n; i++)
