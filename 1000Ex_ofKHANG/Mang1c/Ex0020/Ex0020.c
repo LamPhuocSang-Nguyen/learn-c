@@ -2,10 +2,10 @@
 
 #include <stdio.h>
 
-void InputElement(int *n, int a[*n]);
-void OutputElement(int n, int a[n]);
+void InputElement(int *n, int a[100]);
+void OutputElement(int n, int a[100]);
 void Swap(int *a, int *b);
-void Arrange(int n, int a[n]);
+void Arrange(int n, int a[100]);
 
 
 int main(void)
@@ -21,7 +21,7 @@ int main(void)
     return 0;
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
     printf("\nEnter the number of element: ");
     scanf("%d", &(*n));
@@ -33,7 +33,7 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -48,7 +48,7 @@ void Swap(int *a, int *b)
     *a = *a - *b;
 }
 
-void Arrange(int n, int a[n])
+void Arrange(int n, int a[100])
 {
     for(int i = 0; i < n - 1; i++)
     {

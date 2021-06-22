@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void InputElement(int *n, int a[*n]);
+void InputElement(int *n, int a[100]);
 void OutputElement(int n, int a[n]);
 
 int main()
@@ -18,7 +18,7 @@ int main()
     exit(EXIT_SUCCESS);     //the same as return in c and need to include stdlib.h
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
 
     printf("\nEnter n: ");
@@ -31,7 +31,7 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {

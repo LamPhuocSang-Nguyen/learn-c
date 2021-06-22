@@ -2,11 +2,11 @@
 
 #include <stdio.h>
 
-void InputElement(int *n, int a[*n]);
-void OutputElement(int n, int a[n]);
+void InputElement(int *n, int a[100]);
+void OutputElement(int n, int a[100]);
 int isNumberFinish(int b);
-int IsFirstNumberfinish(int n, int a[n]);
-void Enumerate(int n, int a[n]);
+int IsFirstNumberfinish(int n, int a[100]);
+void Enumerate(int n, int a[100]);
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     return 0;
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
     printf("\nEnter the number of element: ");
     scanf("%d", &(*n));
@@ -32,7 +32,7 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -60,7 +60,7 @@ int IsNumberFinish(int b)
     return 0;
 }
 
-int IsFirstNumberFinish(int n, int a[n])
+int IsFirstNumberFinish(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -72,7 +72,7 @@ int IsFirstNumberFinish(int n, int a[n])
     return -1;
 }
 
-void Enumerate(int n, int a[n])
+void Enumerate(int n, int a[100])
 {
     int lc = IsFirstNumberFinish(n,a);
 

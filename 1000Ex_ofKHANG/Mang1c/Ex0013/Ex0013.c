@@ -2,11 +2,11 @@
 
 #include <stdio.h>
 
-void InputElement(int *n, int a[*n]);
-void OutputElement(int n, int a[n]);
-int Frequency(int b, int n, int a[n]);
-int CheckTheSame(int b, int n, int a[n]);
-void Enumerate(int n, int a[n], int m, int b[m]);
+void InputElement(int *n, int a[100]);
+void OutputElement(int n, int a[100]);
+int Frequency(int b, int n, int a[100]);
+int CheckTheSame(int b, int n, int a[100]);
+void Enumerate(int n, int a[100], int m, int b[100]);
 
 int main()
 {
@@ -24,7 +24,7 @@ int main()
     return 0;
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
     printf("\nEnter the number of element: ");
     scanf("%d", &(*n));
@@ -36,7 +36,7 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -45,7 +45,7 @@ void OutputElement(int n, int a[n])
     printf("\n");
 }
 
-int Frequency(int b, int n, int a[n])
+int Frequency(int b, int n, int a[100])
 {
     int Count = 0;
 
@@ -59,7 +59,7 @@ int Frequency(int b, int n, int a[n])
     return Count;
 }
 
-int CheckTheSame(int b, int n, int a[n])
+int CheckTheSame(int b, int n, int a[100])
 {
     int Count = 0;
 
@@ -79,7 +79,7 @@ int CheckTheSame(int b, int n, int a[n])
     return 0;
 }
 
-void Enumerate(int n, int a[n], int m, int b[m])
+void Enumerate(int n, int a[100], int m, int b[100])
 {
     for(int i = 0; i < n; i++)
     {

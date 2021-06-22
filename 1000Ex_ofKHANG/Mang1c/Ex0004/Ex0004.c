@@ -4,9 +4,9 @@
 #include <time.h>
 #include <stdlib.h>
 
-void InputElement(int *n, float a[*n]);
-void OutputElement(int n, float a[n]);
-void Enumerate(int n, float a[n]);
+void InputElement(int *n, float a[100]);
+void OutputElement(int n, float a[100]);
+void Enumerate(int n, float a[100]);
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     return 0;
 }
 
-void InputElement(int *n, float a[*n])
+void InputElement(int *n, float a[100])
 {
     printf("Enter the number of element: ");
     scanf("%d", &(*n));
@@ -33,7 +33,7 @@ void InputElement(int *n, float a[*n])
     }
 }
 
-void OutputElement(int n, float a[n])
+void OutputElement(int n, float a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -41,7 +41,7 @@ void OutputElement(int n, float a[n])
     }
 }
 
-void Enumerate(int n, float a[n])
+void Enumerate(int n, float a[100])
 {
     if(n == 1)
     {

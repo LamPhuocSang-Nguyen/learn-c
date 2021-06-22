@@ -2,10 +2,10 @@
 
 #include <stdio.h>
 
-void InputElement(int *n, int a[*n]);
-void OutputElement(int n, int a[n]);
-int Ismax(int n, int a[n]);
-void Enumerate(int n, int a[n]); //Liet ke
+void InputElement(int *n, int a[100]);
+void OutputElement(int n, int a[100]);
+int Ismax(int n, int a[100]);
+void Enumerate(int n, int a[100]); //Liet ke
 
 int main(void)
 {
@@ -18,7 +18,7 @@ int main(void)
     return 0;
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
     printf("\nEnter n = ");
     scanf("%d", &(*n));
@@ -30,13 +30,13 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
         printf("\ta[%d] = %d", i, a[i]);
 }
 
-int Ismax(int n, int a[n])
+int Ismax(int n, int a[100])
 {
     int lc;
 
@@ -53,7 +53,7 @@ int Ismax(int n, int a[n])
     return lc;
 }
 
-void Enumerate(int n, int a[n])
+void Enumerate(int n, int a[100])
 {
     int resutl = Ismax(n,a);
 

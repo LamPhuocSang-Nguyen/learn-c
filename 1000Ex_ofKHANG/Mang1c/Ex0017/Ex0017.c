@@ -2,12 +2,12 @@
 
 #include <stdio.h>
 
-void InputElement(int *n, int a[*n]);
-void OutputElement(int n, int a[n]);
-int FirstOddNumber(int n, int a[n]);
-int LowestOddNumber(int n, int a[n]);
-int FindEvenNumber(int n, int a[n]);
-void Enumerate(int n, int a[n]);
+void InputElement(int *n, int a[100]);
+void OutputElement(int n, int a[100]);
+int FirstOddNumber(int n, int a[100]);
+int LowestOddNumber(int n, int a[100]);
+int FindEvenNumber(int n, int a[100]);
+void Enumerate(int n, int a[100]);
 
 
 int main(void)
@@ -22,7 +22,7 @@ int main(void)
     return 0;
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
     printf("\nEnter the number of element: ");
     scanf("%d", &(*n));
@@ -34,7 +34,7 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -42,7 +42,7 @@ void OutputElement(int n, int a[n])
     }
 }
 
-int FirstOddNumber(int n, int a[n])
+int FirstOddNumber(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -54,7 +54,7 @@ int FirstOddNumber(int n, int a[n])
     return -1;
 }
 
-int LowestOddNumber(int n, int a[n])
+int LowestOddNumber(int n, int a[100])
 {
     int lc = FirstOddNumber(n,a);
 
@@ -74,7 +74,7 @@ int LowestOddNumber(int n, int a[n])
     return lc;
 }
 
-int FindEvenNumber(int n, int a[n])
+int FindEvenNumber(int n, int a[100])
 {
     int Value = LowestOddNumber(n,a);
 
@@ -86,7 +86,7 @@ int FindEvenNumber(int n, int a[n])
     return Value - 1;
 }
 
-void Enumerate(int n, int a[n])
+void Enumerate(int n, int a[100])
 {
     int Value = FindEvenNumber(n,a);
 

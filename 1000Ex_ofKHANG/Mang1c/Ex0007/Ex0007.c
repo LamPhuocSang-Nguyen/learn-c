@@ -4,11 +4,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-void InputElement(int *n, float a[*n]);
-void OutputElement(int n, float a[n]);
-float FirtPositiveNumber(int n, float a[n]);
-float SmallestPositiveNumber(int n, float a[n]);
-void Enumerate(int n, float a[n]);
+void InputElement(int *n, float a[100]);
+void OutputElement(int n, float a[100]);
+float FirtPositiveNumber(int n, float a[100]);
+float SmallestPositiveNumber(int n, float a[100]);
+void Enumerate(int n, float a[100]);
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
     return 0;
 }
 
-void InputElement(int *n, float a[*n])
+void InputElement(int *n, float a[100])
 {
     printf("Enter n");
     scanf("%d", &(*n));
@@ -35,7 +35,7 @@ void InputElement(int *n, float a[*n])
     }
 }
 
-void OutputElement(int n, float a[n])
+void OutputElement(int n, float a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -44,7 +44,7 @@ void OutputElement(int n, float a[n])
     printf("\n");
 }
 
-float FirtPositiveNumber(int n, float a[n])
+float FirtPositiveNumber(int n, float a[100])
 {
     for(int i = 0; i < n; i++)
         if(a[i] > 0)
@@ -53,7 +53,7 @@ float FirtPositiveNumber(int n, float a[n])
     return -1;
 }
 
-float SmallestPositiveNumber(int n, float a[n])
+float SmallestPositiveNumber(int n, float a[100])
 {
     float lc = FirtPositiveNumber(n, a);
 
@@ -72,7 +72,7 @@ float SmallestPositiveNumber(int n, float a[n])
     return lc;
 }
 
-void Enumerate(int n, float a[n])
+void Enumerate(int n, float a[100])
 {
     float lc = SmallestPositiveNumber(n,a);
 

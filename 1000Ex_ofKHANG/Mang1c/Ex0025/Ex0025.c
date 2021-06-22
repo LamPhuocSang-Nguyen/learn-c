@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 
-void InputElement(int *n, int a[*n]);
-void OutputElement(int n, int a[n]);
+void InputElement(int *n, int a[100]);
+void OutputElement(int n, int a[100]);
 
 
 int main()
@@ -17,7 +17,7 @@ int main()
     return 1;
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
     int j;
     do
@@ -40,7 +40,7 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {

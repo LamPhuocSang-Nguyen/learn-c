@@ -2,11 +2,11 @@
 
 #include <stdio.h>
 
-void InputElement(int *n, int a[*n]);
-void OutputElement(int n, int a[n]);
-int Digits(int n, int a[n]);
+void InputElement(int *n, int a[100]);
+void OutputElement(int n, int a[100]);
+int Digits(int n, int a[100]);
 int MaxPosition(int m, int b[m]);
-void Enumerate(int n, int a[n]);
+void Enumerate(int n, int a[100]);
 
 
 int main(void)
@@ -21,7 +21,7 @@ int main(void)
     return 0;
 }
 
-void InputElement(int *n, int a[*n])
+void InputElement(int *n, int a[100])
 {
     printf("\nEnter the number of element: ");
     scanf("%d", &(*n));
@@ -33,7 +33,7 @@ void InputElement(int *n, int a[*n])
     }
 }
 
-void OutputElement(int n, int a[n])
+void OutputElement(int n, int a[100])
 {
     for(int i = 0; i < n; i++)
     {
@@ -41,7 +41,7 @@ void OutputElement(int n, int a[n])
     }
 }
 
-int Digits(int n, int a[n])
+int Digits(int n, int a[100])
 {
     int array[10] = {0};
 
@@ -79,7 +79,7 @@ int MaxPosition(int m, int b[m])
     return lc;
 }
 
-void Enumerate(int n, int a[n])
+void Enumerate(int n, int a[100])
 {
     int result = Digits(n,a);
 
