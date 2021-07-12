@@ -1,4 +1,4 @@
-//&&0023
+//&&0050
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,8 +7,9 @@
 
 void InputElement(int* m, int* n, float a[][MAX]);
 void OutputElement(int m, int n, float a[][MAX]);
+int CheckMaxima(int m, int n, int d, int c, float a[][MAX]);
+float SumMaxima(int m, int n, float a[][MAX]);
 void Enumerate(int m, int n, float a[][MAX]);
-int CheckMinima(int m, int n, int d, int c, float a[][MAX]);
 
 
 int main(void)
@@ -63,37 +64,45 @@ void OutputElement(int m, int n, float a[][MAX])
     }
 }
 
-int CheckMinima(int m, int n, int d, int c, float a[][MAX])
+int CheckMaxima(int m, int n, int d, int c, float a[][MAX])
 {
     int flag = 1;
-    int di[8] = {-1, -1, -1, 0, 1, 1, 1, 0};
-    int dj[8] = {-1, 0, 1, 1, 1, 0, -1, -1};
+    int di[8] = {-1,-1,-1,0,1,1,1,0};
+    int dj[8] = {-1,0,1,1,1,0,-1,-1};
 
     for(int i = 0; i < 8; i++)
-    {
+    { 
         if(d + di[i] >= 0 && d + di[i] < m &&
         c + dj[i] >= 0 && c + dj[i] < n &&
-        a[(d + di[i])][(c + dj[i])] < a[d][c])
+        a[(d + di[i])][(c + dj[i])] > a[d][c])
         {
             flag = 0;
         }
     }
+
     return flag;
+
 }
 
-void Enumerate(int m, int n, float a[][MAX])
+float SumMaxima(int m, int n, float a[][MAX])
 {
+    float S = 0;
+
     for(int i = 0; i < m; i++)
     {
         for(int j = 0; j < n; j++)
         {
-            if(CheckMinima(m,n,i,j,a))
+            if(CheckMaxima(m,n,i,j,a))
             {
-                printf("%f", a[i][j]);
-                printf("\t");
+                S = S + a[i][j];
             }
-            printf("\n");
         }
     }
+
+    return S;
 }
 
+void Enumerate(int m, int n, float a[][MAX])
+{
+    printf("Sum of elements maxima is: %f", SumMaxima(m,n,a));
+}
