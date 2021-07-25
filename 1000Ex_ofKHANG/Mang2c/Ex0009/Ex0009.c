@@ -8,8 +8,8 @@
 
 void InputElement(int* m, int* n, int a[][MAX]);
 void OutputElement(int m, int n, int a[][MAX]);
-int CountRow();
-int MaxCountRow();
+int CountRow(int m, int n, int a[][MAX], int d);
+int MaxCountRow(int m, int n, int a[][MAX]);
 void Enumerate(int m, int n, int a[][MAX]);
 
 
@@ -59,12 +59,45 @@ void OutputElement(int m, int n, int a[][MAX])
     }
 }
 
+int CountRow(int m, int n, int a[][MAX], int d)
+{
+    int Count = 0;
+
+    for(int j = 0; j < n; j++)
+    {
+        if(a[d][j] % 2 == 0)
+        {
+            Count++;
+        }
+    }
+
+    return Count;
+}
+
 int MaxCountRow(int m, int n, int a[][MAX])
 {
-    
+    int Max = CountRow(m,n,a,0);
+
+    for(int i = 0; i < m; i++)
+    {
+        if(CountRow(m,n,a,i) > Max)
+        {
+            Max = CountRow(m,n,a,i);
+        }
+    }
+
+    return Max;
 }
 
 void Enumerate(int m, int n, int a[][MAX])
 {
     int lc = MaxCountRow(m,n,a);
+
+    for(int i = 0; i < m; i++)
+    {
+        if(CountRow(m,n,a,i) == lc)
+        {
+            printf("%4d ", i);
+        }
+    }
 }
